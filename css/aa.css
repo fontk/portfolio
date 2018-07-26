@@ -1,0 +1,7 @@
+@mixin mensaje-de-firefox($selector){
+  body.firefox #($selector):before{
+    content: "Hola, firefox";
+  }
+}
+
+@include mensaje-de-firefox(".header");

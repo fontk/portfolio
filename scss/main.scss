@@ -1,0 +1,81 @@
+/* General styles */
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin flex-centro {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#mainNav {
+  @include flex-centro();
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  ul {
+    @include flex-centro();
+    list-style: none;
+    flex-basis: 35%;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    color: #011936;
+    font-size: 1.4em;
+    height: 35px;
+  }
+}
+
+header {
+  height: 500px;
+  width: 100%;
+  background-image: linear-gradient(-135deg, #253c78, #0a2239);
+  canvas {
+    position: absolute;
+  }
+  h1 {
+    margin:0;
+    padding: 15px 0 15px 0;
+    color: white;
+  }
+}
+
+@each $animal in puma, caballo, oso, cebra{
+  .#{$animal}-icon {
+    background-image: url('/img/#{$animal}.png');
+  }
+}
+
+@each $animal, $color, $cursor in (puma, black, default),
+(caballo, brown, pointer),
+(oso, white, move){
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+@mixin fondo-resaltado { background-color: #fc0;}
+@mixin texto-cabecera {font-size: 20px;}
+
+@mixin compuesto {
+  @include fondo-resaltado;
+  @include texto-cabecera;
+}
+
+.pagina {
+  @include compuesto;
+}
+
+@mixin borde-sexy($color, $width){
+  borde: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+
+p {@include borde-sexy(blue, 2em);}
