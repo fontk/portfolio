@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-    $('header').particleground({
-        dotColor: '#BDC3C7',
-        lineColor: '#BDC3C7'
-    });
+    particlesJS.load('cabecera', 'js/particulas.json');
+
+
 
 });

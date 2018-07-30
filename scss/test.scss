@@ -1,0 +1,44 @@
+@mixin mensaje-de-firefox($selector) {
+    body.firefox #($selector):before{
+      content: "Hola, firefox";
+    }
+  }
+  
+@include mensaje-de-firefox(".header");
+
+@each $animal in puma, caballo, oso, cebra{
+  .#{$animal}-icon {
+    background-image: url('/img/#{$animal}.png');
+  }
+}
+
+@each $animal, $color, $cursor in (puma, black, default),
+(caballo, brown, pointer),
+(oso, white, move){
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+@mixin fondo-resaltado { background-color: #fc0;}
+@mixin texto-cabecera {font-size: 20px;}
+
+@mixin compuesto {
+  @include fondo-resaltado;
+  @include texto-cabecera;
+}
+
+.pagina {
+  @include compuesto;
+}
+
+@mixin borde-sexy($color, $width){
+  borde: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+
+p {@include borde-sexy(blue, 2em);}

@@ -1277,6 +1277,7 @@ var pJS = function(tag_id, params){
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', pJS.particles.shape.image.src);
+        xhr.overrideMimeType("application/json");
         xhr.onreadystatechange = function (data) {
           if(xhr.readyState == 4){
             if(xhr.status == 200){
