@@ -6,3 +6,17 @@ $optional_color_3: #2c2e43;
 *{
   font-family: 'Roboto', sans-serif;
 }
+
+
+@mixin flex-centro_vertical {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+  }
+  @mixin flex-centro_horizontal {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+  }

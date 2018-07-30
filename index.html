@@ -12,29 +12,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>A.Fuentes</title>
+    <title>Alex Fuentes</title>
 
     <!-- Fonts -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 
-    <!-- Web own css -->
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-
     <!-- External css-->
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Web own css -->
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/calculadora.css">
 
     <!-- External js-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/particles.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     
     <!-- Web own js -->
 
     <script src="js/main.js"></script>
-   
+    <script src="js/calculadora.js"></script>
 
 
 </head>
@@ -57,20 +59,48 @@
     </nav>
 
     <header id="cabecera">
-        <h1>{Alejandro Fuentes}</h1>
-        <p>Programador nato en constante crecimiento. Full-stack web developer y más.</p>
+        <h1>&lt;?$protocol -> Alejandro Fuentes ( Hello );&gt;</h1>
+        <p>Programador vocacional en constante crecimiento. Full-stack web developer y más.</p>
+        <p>Puedes ponerte en contacto conmigo a través</p>
     </header>
 
-    <article id="">
+    <article id="calculadora" class="jumbotron">
 
-
-        <div>
-            <a href="">Ver mi trabajo</a>
-        </div>
-
-        <div>
-            <a href="">De qué habilidades dispongo</a>
-        </div>
+        <form>
+            <div class="fila">
+                <input type="textbox" id="formula" readonly>
+                <input type="textbox" id="resultado" readonly>
+            </div>
+            <div class="fila">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="+">
+            </div>
+            <div class="fila">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="-">
+            </div>
+            <div class="fila">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="/">
+            </div>
+            <div class="fila">
+                <input type="button" value=".">
+                <input type="button" value="0">
+                <input type="button" value="=">
+                <input type="button" value="*">
+            </div>
+            <div class="fila">
+                <input type="button" value="Reset">
+                <input type="button" value="CE">
+            </div>
+        </form>
+                
 
         <a id="contactButton" href=""></a>
 

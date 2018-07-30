@@ -1,0 +1,33 @@
+
+form {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+#calculadora {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+}
+#calculadora form {
+    width:350px;
+}
+
+
+div.fila{
+    display:flex;
+    width: 350px;
+    height: 80px;
+}
+
+form input[type="button"]{
+    flex-basis: 25%;
+    margin: 2px;
+}
+form input[type="textbox"] {
+    box-sizing: border-box;
+    margin: 1px;
+    max-width: 50%;
+}

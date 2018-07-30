@@ -1,18 +1,7 @@
 /* General styles */
-@import "lib";
+@import "_lib";
 
 
-@mixin flex-centro_vertical {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-}
-@mixin flex-centro_horizontal {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-direction: column;
-}
 
 #mainNav {
   @include flex-centro_vertical();
@@ -23,7 +12,7 @@
     @include flex-centro_vertical();
     list-style: none;
     flex-basis: 35%;
-    padding: 0;
+    margin: 0;
   }
   li {
     color: $primary_color;
