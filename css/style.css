@@ -16,7 +16,10 @@
   align-items: center;
   height: 60px;
   background-color: white;
-  border: 0; }
+  border: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%; }
   #mainNav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -53,7 +56,7 @@ header {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  height: 500px;
+  height: 100vh;
   width: 100%;
   padding: 150px 0 150px 0;
   -webkit-box-sizing: border-box;
