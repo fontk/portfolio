@@ -8,10 +8,10 @@ $(document).ready(function(){
 
         if(operador != "=" && operador != "CE" && operador != "Reset" && operador != "."){
 
-            if(isNaN(operador) && isNaN(comprobarNumero)) {
-                // Chupáme un huevo
-            } else {
+            if(!(isNaN(operador) && isNaN(comprobarNumero))) {
                 $("#formula").val(formula + operador);
+            } else {
+                
             }           
 
         } else if(operador == "="){

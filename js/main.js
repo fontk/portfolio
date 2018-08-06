@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    particlesJS.load('cabecera', './js/particulas.json');
+    if(document.getElementById("cabecera"))particlesJS.load('cabecera');
     
     $("#contacto").click(function(){
         $("#myModal").modal('show');
